@@ -1,0 +1,29 @@
+# Custom configuration to always export to video
+# This overrides the default behavior to always write video files
+
+file_writer:
+  write_to_movie: true
+  save_last_frame: false
+  open_file_upon_completion: true
+  show_file_location_upon_completion: true
+  movie_file_extension: ".mp4"
+  video_codec: "libx264"
+  pixel_format: "yuv420p"
+
+# Set default quality to HD
+camera:
+  resolution: (1920, 1080)
+  fps: 30
+
+# Set output directory
+directories:
+  output: "videos"
+
+# Enable progress bars and verbose output
+scene:
+  preview_while_skipping: false
+  show_animation_progress: true
+  leave_progress_bars: true
+
+# Set log level to show more information
+log_level: "INFO" 

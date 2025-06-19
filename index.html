@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manim for Math Teachers - Interactive Animation Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #764ba2;
+            font-size: 1.5rem;
+            margin: 25px 0 15px 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .video-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-card video {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Manim for Math Teachers</h1>
+            <p class="subtitle">Interactive Animation Guide & Turnkey Solutions</p>
+        </header>
+
+        <div class="main-content">
+            <div class="section">
+                <h2>🚀 What is Manim?</h2>
+                <p>Manim is a powerful Python library for creating mathematical animations. This project provides turnkey solutions and best practices specifically designed for math teachers to create engaging educational content.</p>
+                
+                <div class="highlight">
+                    <h3>🎯 Perfect for:</h3>
+                    <ul>
+                        <li>Visualizing mathematical concepts</li>
+                        <li>Creating step-by-step proofs</li>
+                        <li>Demonstrating geometric transformations</li>
+                        <li>Showing real-time mathematical simulations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📚 Documentation & Resources</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>📖 Prompting Guide</h3>
+                        <p>Master the art of communicating with AI to create perfect Manim animations. Learn specific techniques for positioning, timing, and visual effects.</p>
+                        <a href="manim-prompting-guide.md" class="btn">Read Guide</a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>⚙️ Setup Scripts</h3>
+                        <p>One-click installation and configuration scripts for different environments. Get started quickly with our automated setup process.</p>
+                        <a href="#setup" class="btn">View Scripts</a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>🎨 Example Scenes</h3>
+                        <p>Ready-to-use animation examples covering various mathematical topics. Perfect starting points for your own creations.</p>
+                        <a href="#examples" class="btn">View Examples</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="examples">
+                <h2>🎬 Example Animations</h2>
+                <div class="video-section">
+                    <p>Watch these sample animations created with Manim:</p>
+                    
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <h3>Simple Demo</h3>
+                            <video controls>
+                                <source src="videos/SimpleDemo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p>Basic animation demonstrating fundamental Manim concepts.</p>
+                        </div>
+                        
+                        <div class="video-card">
+                            <h3>Spinning Earth</h3>
+                            <video controls>
+                                <source src="videos/SpinningEarth.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p>3D visualization of Earth rotation with realistic textures.</p>
+                        </div>
+                        
+                        <div class="video-card">
+                            <h3>Textured Earth</h3>
+                            <video controls>
+                                <source src="videos/TexturedSpinningEarth.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p>Enhanced Earth model with day/night cycle visualization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="setup">
+                <h2>⚙️ Quick Setup</h2>
+                <p>Get started with Manim in minutes using our automated scripts:</p>
+                
+                <div class="code-block">
+                    <h3>First Time Setup:</h3>
+                    <code>./manim-FirstTime.sh</code>
+                </div>
+                
+                <div class="code-block">
+                    <h3>Render Animations:</h3>
+                    <code>./render.sh</code>
+                </div>
+                
+                <div class="code-block">
+                    <h3>Advanced Options:</h3>
+                    <code>./manim-Turnkey-Options.sh</code>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔧 Project Structure</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>📁 Scenes Directory</h3>
+                        <p>Contains all animation scene files with examples for different mathematical concepts.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>🎥 Videos Directory</h3>
+                        <p>Rendered animation outputs ready for classroom use or further editing.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>📖 Documentation</h3>
+                        <p>Comprehensive guides and best practices for creating effective math animations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🚀 Getting Started</h2>
+                <div class="highlight">
+                    <h3>Quick Start Steps:</h3>
+                    <ol>
+                        <li>Clone this repository</li>
+                        <li>Run the first-time setup script</li>
+                        <li>Explore the example scenes</li>
+                        <li>Modify scenes for your specific needs</li>
+                        <li>Render your animations</li>
+                    </ol>
+                </div>
+                
+                <div style="text-align: center; margin: 30px 0;">
+                    <a href="https://github.com/rootlake/manim" class="btn">View on GitHub</a>
+                    <a href="manim-prompting-guide.md" class="btn">Read Documentation</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Josh Lake - Manim for Math Teachers</p>
+            <p>Empowering educators with powerful mathematical visualization tools</p>
+        </footer>
+    </div>
+</body>
+</html> 
